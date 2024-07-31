@@ -36,3 +36,62 @@
     transform: rotate(360deg);
   }
 }
+
+/* Specific table styling */
+.table-container {
+  margin: 30px auto; /* Centrează containerul tabelului pe pagină */
+  width: 50%; /* Setează lățimea containerului tabelului */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Umbră mai subtilă */
+  border-radius: 12px;
+  overflow: hidden;
+  background: #fff; /* Fundal pentru container */
+  display: flex; /* Folosește flexbox pentru aliniere */
+  justify-content: center; /* Centrează tabelul orizontal */
+}
+
+#result {
+  width: 50%;
+  border-collapse: separate;
+}
+
+#result th, #result td {
+  padding: 15px 18px;
+  text-align: center;
+  font-size: 16px;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+thead th {
+  background-color: #a8dadc; /* Culoare de fundal mai fină */
+  color: #1d3557; /* Culoare mai închisă pentru text */
+  font-family: 'Helvetica', sans-serif;
+  border-bottom: 2px solid #457b9d; /* Bordură de jos mai închisă */
+  padding: 20px 18px;
+}
+
+tbody tr {
+  background: #f1faee; /* Culoare de fundal mai fină pentru rânduri */
+  border-bottom: 1px solid #e1e1e1;
+}
+
+tbody tr:nth-child(even) {
+  background: #e9f5f2; /* Alternarea culorilor de fundal */
+}
+
+tbody tr:hover {
+  background: #d0efeb; /* Culoare de fundal pentru hover mai fină */
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
+tbody td {
+  font-family: 'Verdana', sans-serif;
+}
+
+tbody td:hover {
+  background: #d4e8f5; /* Culoare de fundal pentru hover mai fină */
+  color: #000;
+  font-weight: bold;
+}
+
