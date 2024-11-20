@@ -1,97 +1,102 @@
-.App {
+#header {
   text-align: center;
+  margin: 3rem auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#header h1 {
+  font-size: 3rem;
+  padding: 15px 20px;
+  border: 4px solid gold;
+  border-radius: 15px;
+  background: linear-gradient(to right, gold, silver);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-weight: bold;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.5);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#user-input {
+  padding: 1rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #307e6c, #2b996d);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.input-group {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  gap: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+#user-input label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-/* Specific table styling */
-.table-container {
-  margin: 30px auto; /* Centrează containerul tabelului pe pagină */
-  width: 50%; /* Setează lățimea containerului tabelului */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Umbră mai subtilă */
-  border-radius: 12px;
-  overflow: hidden;
-  background: #fff; /* Fundal pentru container */
-  display: flex; /* Folosește flexbox pentru aliniere */
-  justify-content: center; /* Centrează tabelul orizontal */
+#user-input input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 3px solid #76c0ae;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: #c2e9e0;
+  font-size: 1rem;
 }
 
 #result {
-  width: 50%;
+  max-width: 50rem;
+  margin: 2rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, silver, rgba(242, 209, 23, 0.992));
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+#result table {
+  width: 100%;
   border-collapse: separate;
+  border-spacing: 0;
 }
 
-#result th, #result td {
-  padding: 15px 18px;
+#result thead {
+  background: linear-gradient(180deg, #307e6c, #2b996d);
+  color: #f1f8f7;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#result th,
+#result td {
+  padding: 1rem;
   text-align: center;
-  font-size: 16px;
-  color: #333;
-  transition: background 0.3s, color 0.3s;
+  font-size: 1rem;
+  color: #2b3e44;
 }
 
-thead th {
-  background-color: #a8dadc; /* Culoare de fundal mai fină */
-  color: #1d3557; /* Culoare mai închisă pentru text */
-  font-family: 'Helvetica', sans-serif;
-  border-bottom: 2px solid #457b9d; /* Bordură de jos mai închisă */
-  padding: 20px 18px;
+#result tbody tr {
+  background-color: #f2e7bb;
+  transition: background-color 0.3s ease-in-out;
 }
 
-tbody tr {
-  background: #f1faee; /* Culoare de fundal mai fină pentru rânduri */
-  border-bottom: 1px solid #e1e1e1;
+#result tbody tr:nth-child(even) {
+  background-color: #ecefc7;
 }
 
-tbody tr:nth-child(even) {
-  background: #e9f5f2; /* Alternarea culorilor de fundal */
-}
-
-tbody tr:hover {
-  background: #d0efeb; /* Culoare de fundal pentru hover mai fină */
+#result tbody tr:hover {
+  background-color: #ebf28c;
   transform: scale(1.02);
   transition: all 0.3s ease;
 }
 
-tbody td {
-  font-family: 'Verdana', sans-serif;
+#result tbody td {
+  font-family: "Roboto Condensed", sans-serif;
 }
-
-tbody td:hover {
-  background: #d4e8f5; /* Culoare de fundal pentru hover mai fină */
-  color: #000;
-  font-weight: bold;
-}
-
